@@ -1,0 +1,62 @@
+{
+    "status": 1,
+    "msg": "数据获取成功",
+    "data": {
+    	"icon":????
+        "seriesName": "大众CC",   // String车系名
+        "guidePrice": "25.28-34.28万",  // String厂商指导价
+        "imageUrl": "http:// img1.xcarimg.com/b2/s7413/20151128181552060421152430995.jpg", //车系图
+        "saleType": 1,  // 车系状态 请根据http://zentao.xcar.com.cn/zentao/doc-view-301.html判断
+        "imageCount":100,// Int 该车系下所有图片数量
+        "level": "中型SUV",  //String 级别，如果没有级别信息返回空字符串。例如：紧凑型车
+        "displacement": "1.8T 2.0T 3.0L", //String排量，取车系下在售车型的排量，从小到大，先L后T，排重，用空格分隔，无则空字符串
+
+        
+        
+        "categoryList": [ // Array 子车系分类数组 【'在售','即将上市','停售'】
+            {
+                "categoryName": "在售",// String 在售、即将上市、停售
+                "subSeriesList": [ // Array 子车系数组    在售【'排量1','排量2','排量3'】
+                    {
+                        "sectionName": "3.0L 184kW", 
+                        //String
+						在售和即将上市：返回排量+功率，例如：1.8L 100kw （排量没有，功率没有：- -）
+						停售：返回年款，例如：2016款
+
+                        "carList": [ // Array车型数组
+
+                            {
+
+
+                                "seriesId": 1154,  // Int 所属车系id
+                                "carId": 27923,    // Int 车型id
+                                "carName": "3.0FSI V6", 
+                                //String 车型名，例如：30 TFSI 手动舒适版
+
+
+                                "seriesName": "大众CC",//String 车系名
+
+
+                                "carYear": "2016款",//String车型对应的年款
+
+                                "saleType": 1,
+                                "guidePrice": "34.28万",
+                                "powerType": 1, //Int 能源类别
+                                "taxDown": 0,   //Int 是否减税，1-是，0-不是
+
+                                "displacement": "3.0L",
+                                "chairCount": 5,//Int座椅数量，后台没有填写时返回0
+
+                                "localPrice": "25.68万", //String本地参考价
+                                
+                                "transmission": "6挡双离合",
+                                "drive": "前置前驱"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "isCollected": 0
+    }
+}
